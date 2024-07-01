@@ -19,7 +19,7 @@ namespace GPSystem
 {
     public partial class formEmployee : Form
     {
-       
+
         public formEmployee()
         {
             InitializeComponent();
@@ -92,6 +92,24 @@ namespace GPSystem
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                string query = $"SELECT ID, firstName, lastName, monthlySalary, overtimeRate, allowance FROM employee " +
+                               $"WHERE firstName LIKE '%{searchText}%' OR lastName LIKE '%{searchText}%'";
+
+                EmployeeDBService.DisplayAndSearch(query, dataGridView1);
+            }
+            else
+            {
+                // Clear the search and display all employees if search text is empty
+                EmployeeDBService.DisplayAndSearch("SELECT ID, firstName, lastName, monthlySalary, overtimeRate, allowance FROM employee", dataGridView1);
+            }
         }
     }
 }

@@ -49,7 +49,7 @@
             btnSetting.Name = "btnSetting";
             btnSetting.Size = new Size(155, 73);
             btnSetting.TabIndex = 1;
-            btnSetting.Text = "Setting";
+            btnSetting.Text = "Settings";
             btnSetting.UseVisualStyleBackColor = true;
             btnSetting.Click += btnSetting_Click;
             // 

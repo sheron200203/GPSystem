@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             txtId = new TextBox();
-            search = new Label();
-            txtSearch = new TextBox();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -68,22 +66,6 @@
             txtId.Size = new Size(125, 27);
             txtId.TabIndex = 33;
             txtId.Visible = false;
-            // 
-            // search
-            // 
-            search.AutoSize = true;
-            search.Location = new Point(551, 47);
-            search.Name = "search";
-            search.Size = new Size(53, 20);
-            search.TabIndex = 32;
-            search.Text = "Search";
-            // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(610, 40);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(195, 27);
-            txtSearch.TabIndex = 31;
             // 
             // dataGridView1
             // 
@@ -182,7 +164,7 @@
             // 
             // txtTax
             // 
-            txtTax.Location = new Point(416, 101);
+            txtTax.Location = new Point(568, 100);
             txtTax.Name = "txtTax";
             txtTax.Size = new Size(125, 27);
             txtTax.TabIndex = 27;
@@ -190,7 +172,7 @@
             // tax
             // 
             tax.AutoSize = true;
-            tax.Location = new Point(381, 108);
+            tax.Location = new Point(533, 107);
             tax.Name = "tax";
             tax.Size = new Size(30, 20);
             tax.TabIndex = 26;
@@ -198,7 +180,7 @@
             // 
             // txtLeaves
             // 
-            txtLeaves.Location = new Point(416, 68);
+            txtLeaves.Location = new Point(568, 67);
             txtLeaves.Name = "txtLeaves";
             txtLeaves.Size = new Size(125, 27);
             txtLeaves.TabIndex = 25;
@@ -206,7 +188,7 @@
             // leaves
             // 
             leaves.AutoSize = true;
-            leaves.Location = new Point(289, 73);
+            leaves.Location = new Point(441, 72);
             leaves.Name = "leaves";
             leaves.Size = new Size(121, 20);
             leaves.TabIndex = 24;
@@ -214,7 +196,7 @@
             // 
             // txtscDateRange
             // 
-            txtscDateRange.Location = new Point(416, 35);
+            txtscDateRange.Location = new Point(568, 34);
             txtscDateRange.Name = "txtscDateRange";
             txtscDateRange.Size = new Size(125, 27);
             txtscDateRange.TabIndex = 23;
@@ -222,7 +204,7 @@
             // scDateRange
             // 
             scDateRange.AutoSize = true;
-            scDateRange.Location = new Point(241, 42);
+            scDateRange.Location = new Point(393, 41);
             scDateRange.Name = "scDateRange";
             scDateRange.Size = new Size(170, 20);
             scDateRange.TabIndex = 22;
@@ -286,7 +268,7 @@
             // Holidays
             // 
             Holidays.AutoSize = true;
-            Holidays.Location = new Point(350, 145);
+            Holidays.Location = new Point(502, 144);
             Holidays.Name = "Holidays";
             Holidays.Size = new Size(67, 20);
             Holidays.TabIndex = 38;
@@ -294,7 +276,7 @@
             // 
             // txtHolidays
             // 
-            txtHolidays.Location = new Point(416, 145);
+            txtHolidays.Location = new Point(568, 144);
             txtHolidays.Name = "txtHolidays";
             txtHolidays.Size = new Size(125, 27);
             txtHolidays.TabIndex = 39;
@@ -321,8 +303,6 @@
             Controls.Add(dateTimePicker3);
             Controls.Add(dateTimePicker2);
             Controls.Add(txtId);
-            Controls.Add(search);
-            Controls.Add(txtSearch);
             Controls.Add(dataGridView1);
             Controls.Add(btnDelete);
             Controls.Add(btnCancel);
@@ -346,8 +326,6 @@
         #endregion
 
         private TextBox txtId;
-        private Label search;
-        private TextBox txtSearch;
         private DataGridView dataGridView1;
         private Button btnDelete;
         private Button btnCancel;

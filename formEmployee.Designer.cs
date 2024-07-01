@@ -98,7 +98,7 @@
             // 
             // txtMonthlySalary
             // 
-            txtMonthlySalary.Location = new Point(384, 39);
+            txtMonthlySalary.Location = new Point(423, 42);
             txtMonthlySalary.Name = "txtMonthlySalary";
             txtMonthlySalary.Size = new Size(125, 27);
             txtMonthlySalary.TabIndex = 6;
@@ -106,7 +106,7 @@
             // monthlySalary
             // 
             monthlySalary.AutoSize = true;
-            monthlySalary.Location = new Point(271, 45);
+            monthlySalary.Location = new Point(310, 48);
             monthlySalary.Name = "monthlySalary";
             monthlySalary.Size = new Size(107, 20);
             monthlySalary.TabIndex = 5;
@@ -114,7 +114,7 @@
             // 
             // txtOvertimeRate
             // 
-            txtOvertimeRate.Location = new Point(384, 72);
+            txtOvertimeRate.Location = new Point(423, 75);
             txtOvertimeRate.Name = "txtOvertimeRate";
             txtOvertimeRate.Size = new Size(125, 27);
             txtOvertimeRate.TabIndex = 8;
@@ -122,7 +122,7 @@
             // overtimeRate
             // 
             overtimeRate.AutoSize = true;
-            overtimeRate.Location = new Point(274, 78);
+            overtimeRate.Location = new Point(313, 81);
             overtimeRate.Name = "overtimeRate";
             overtimeRate.Size = new Size(104, 20);
             overtimeRate.TabIndex = 7;
@@ -130,7 +130,7 @@
             // 
             // txtAllowance
             // 
-            txtAllowance.Location = new Point(384, 105);
+            txtAllowance.Location = new Point(423, 108);
             txtAllowance.Name = "txtAllowance";
             txtAllowance.Size = new Size(125, 27);
             txtAllowance.TabIndex = 10;
@@ -138,7 +138,7 @@
             // allowance
             // 
             allowance.AutoSize = true;
-            allowance.Location = new Point(300, 111);
+            allowance.Location = new Point(339, 114);
             allowance.Name = "allowance";
             allowance.Size = new Size(78, 20);
             allowance.TabIndex = 9;
@@ -225,15 +225,16 @@
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(626, 12);
+            txtSearch.Location = new Point(621, 12);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(195, 27);
             txtSearch.TabIndex = 14;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // search
             // 
             search.AutoSize = true;
-            search.Location = new Point(567, 19);
+            search.Location = new Point(562, 19);
             search.Name = "search";
             search.Size = new Size(53, 20);
             search.TabIndex = 15;

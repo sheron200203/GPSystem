@@ -35,6 +35,11 @@ namespace GPSystem
             btnSave.Text = "Save";
         }
 
+        public void ClearOnlyTextFields()
+        {
+            txtId.Text = txtscDateRange.Text = txtLeaves.Text = txtTax.Text = txtHolidays.Text = string.Empty;
+            btnSave.Text = "Save";
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if ((comboBox1.SelectedItem == null) || (dateTimePicker2.Text == string.Empty) || (dateTimePicker3.Text == string.Empty) || (scDateRange.Text == string.Empty) || (leaves.Text == string.Empty) || (tax.Text == string.Empty) || (Holidays.Text == string.Empty))
@@ -98,6 +103,7 @@ namespace GPSystem
         {
             if(comboBox1.SelectedItem != null)
             {
+                ClearOnlyTextFields();
                 dateTimePicker2.Value = new DateTime(DateTime.Now.Year, comboBox1.SelectedIndex + 1, 1);
                 int daysInMonth = DateTime.DaysInMonth(DateTime.Now.Year, comboBox1.SelectedIndex + 1);
                 dateTimePicker3.Value = new DateTime(DateTime.Now.Year, comboBox1.SelectedIndex + 1, daysInMonth);
