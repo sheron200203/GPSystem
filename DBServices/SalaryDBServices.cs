@@ -41,7 +41,7 @@ namespace GPSystem.DB
             }
             con.Close();
         }
-        public static void UpdateSalary(Salary salary, string id)
+        public static void UpdateSalary(Salary salary, int id)
         {
             string sql = "UPDATE salary SET employeeID = @employeeID, month = @month, absentDays = @absentDays, noOvertimeHours = @noOvertimeHours, noLeaves = @noLeaves, noHolidays = @noHolidays, basePay = @basePay, noPay = @noPay, grossPay = @grossPay WHERE id = @ID";
             MySqlConnection con = dbConnection.dbconect();

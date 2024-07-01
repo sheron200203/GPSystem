@@ -10,20 +10,26 @@ namespace GPSystem.CLASSES
 {
     internal class SalaryFunctions
     {
-        public decimal NoPay(decimal monthlySalary, int salaryCycledateRange, int absentDays)
+        private readonly decimal _monthlySalary;
+
+        public SalaryFunctions(decimal monthlySalary)
         {
-            decimal noPayVal = (monthlySalary / salaryCycledateRange) * absentDays;
-            return noPayVal;
+            _monthlySalary = monthlySalary;
         }
-        public decimal BasePay(decimal monthlySalary, decimal allowances, decimal overTimeRate, decimal overtimeHours)
+
+        public decimal CalculateNoPay(int salaryCycleDateRange, int absentDays)
         {
-            decimal basePayVal = monthlySalary + allowances + (overTimeRate * overtimeHours);
-            return basePayVal;
+            return (_monthlySalary / salaryCycleDateRange) * absentDays;
         }
-        public decimal GrossPay(decimal basePay, decimal noPay, decimal tax)
+
+        public decimal CalculateBasePay(decimal allowance, decimal overtimeRate, decimal overtimeHours)
         {
-            decimal grossPayVal = basePay - (noPay + basePay * tax / 100);
-            return grossPayVal;
+            return _monthlySalary + allowance + (overtimeRate * overtimeHours);
+        }
+
+        public decimal CalculateGrossPay(decimal basePay, decimal noPay, decimal tax)
+        {
+            return basePay - (noPay + (basePay * tax / 100));
         }
     }
 }

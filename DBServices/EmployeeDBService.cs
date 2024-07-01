@@ -126,7 +126,7 @@ namespace GPSystem.DB
 
             return employeeNames;
         }
-        public static Employee getEmployeeSalary(int id)
+        public static Employee GetEmployeeSalary(int id)
         {
             try
             {

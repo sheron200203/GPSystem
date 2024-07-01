@@ -99,7 +99,7 @@ namespace GPSystem.DB
             con.Close();
         }
 
-        public static Setting getSalarySettings(String month)
+        public static Setting GetSalarySettings(String month)
         {
             try
             {
